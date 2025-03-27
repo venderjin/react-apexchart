@@ -9,3 +9,15 @@ export const weatherTypes = [
     "rainval",
 ] as const
 export type WeatherType = (typeof weatherTypes)[number]
+
+export type responseDataType = {
+    timestamp: string
+    cpg: number
+    weather: WeatherType
+}[]
+
+export type responseType = {
+    id: number
+    name: string
+    data: responseDataType
+}[]
